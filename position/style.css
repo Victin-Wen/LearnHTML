@@ -1,0 +1,51 @@
+div.container{
+    width: 500px;
+    height: 2000px;
+    background-color: aquamarine;
+    /* position: absolute; */
+    /* closest positioned element */
+
+.box{
+    width: 200px;
+    height: 200px;
+}
+.small-box{
+    width: 100px;
+    height: 100px;
+}
+.box1{
+    background-color: rgb(142, 185, 198);
+    /* 如果不设置 position 非 static 则下面不生效 */
+    z-index: 2;
+}
+.box2{
+    background-color: pink;
+    position: relative;
+    /* position: absolute;  /* 相对浏览器大小的绝对位置  */
+    /* position: fixed;  /* 固定在浏览器某个位置   */
+    /* position: sticky;  /* 固定在浏览器某个位置   */
+    /* bottom: 50px;
+    left: 100px;
+    right: 0;
+    top: 10px; */
+    z-index: 0;
+}
+.box3{
+    background-color: yellowgreen;
+}
+}
+.box4{
+    background-color: orange;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: -1;
+}
+
+.box5{
+    background-color: purple;
+    position: absolute;
+    top: 30px;
+    left: 80px;
+    z-index: -5;
+}

@@ -1,0 +1,114 @@
+/* DOM Tree */
+p::before{
+    content: ">>";
+    color: cornflowerblue;
+}
+*::selection{
+    background-color: bisque;
+}
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(18, 18, 22);
+    background-image: url(./Images/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/* Attribute selector */
+input [type="text"]{
+    color: aqua;
+}
+input[type="text"]:hover{
+    color: chartreuse;
+}
+input[type="text"]:active{
+    color: lightcoral;
+}
+input[type="text"]:focus{
+    color: lightseagreen;
+}
+
+/* descendant selector */
+*{
+    color: rgb(9, 63, 38);
+}
+
+/* id selector */
+#firstcolor{
+    color: hotpink;
+}
+/* class selector */
+.blue-text{
+    color: steelblue;
+}
+.myClass{
+    /* display:block; */
+    background-color: rgb(108, 171, 20);
+    padding: 2rem 3rem;
+    /* width: 500px;
+    height: 300px; */
+}
+
+.large-text{
+    font-size: 32px;
+}
+/* element and class selector */
+a.large-text {
+    font-size: larger;
+}
+.red-text{
+    color: red;
+}
+.box{
+    width: 500px;
+    height: 500px;
+    background-color: aquamarine;
+    border: 10px solid black;
+    padding: 20px;
+}
+
+h1{
+    background-color: rgba(200, 200, 200, 0.5);
+    background-color: transparent;
+    font-size: 20px;
+    /* width: 1200px;
+    height: 600px;
+    border: 5px solid burlywood;
+    padding-left: 100px;
+    margin: 0rem 5 rem; */
+}
+h2{
+    color: rgb(107, 189, 141);
+}
+
+h2.red-text{
+    color: red;
+}
+.red-text{
+    color: palevioletred;
+}
+a{
+    text-decoration: none;
+}
+/* a{
+    text-decoration: line-through;
+} */
+#image1{
+    width: 600px;
+    height: 300px;
+}
+#image2{
+    width: 400px;
+    height: 300px;
+}
+
+table, tr, th, td{
+    border: 1px solid black;  /* 线是分开的*/
+    border-collapse: collapse;  /* 合起来*/
+}
+td, th{
+    padding: 0.25rem 0.5rem;
+}
+tr:hover{
+    background-color: antiquewhite;
+}

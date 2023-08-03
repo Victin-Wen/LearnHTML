@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="this is a test text" />
+    <meta name="robots" content="index,follow" />
+    <!-- All search engines -->
+    <meta name="googlebot" content="index,follow" />
+    <meta name="author" content="Jun Wen" />
+    <!-- google specific -->
+    <title>Second</title>
+    <link rel="stylesheet" href="./style.css" />
+
+    <base target="_blank" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="/udemyLearn/Images/favicon.ico" />
+
+</head>
+<body>
+    <h1>The second page</h1>
+    <form action="">
+        <!-- default method: get -->
+        <label for="name">Username: </label>
+        <input id="name" type="text" name="name" minlength="5" maxlength="50" placeholder="Please input your real name" class="red-text" />
+        <hr />
+        <label for="secmale">SecondMale</label>
+        <input id="secmale" type="radio" name="secgender"  value="secMale" required/>
+  
+        <label for="secfemale">SecondFemale</label>
+        <input id="secfemale" type="radio" name="secgender"  value="secFemale" />
+
+        <label for="secother">SecondOther</label>
+        <input id="secother" type="radio" name="secgender"  value="secOther" />
+        <hr />
+        <label for="gender">Gender: </label>
+        <select name="gender" id="gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+
+        <label for="email">Email: </label>
+        <input id="email" type="email" name="email" />
+        <hr />
+
+        <label for="age">Age: </label>
+        <input id="age" type="number" name="age" min="0" max="120" step="1" />
+        <hr />
+
+        <label for="age">Second Age: </label>
+        0 <input id="second" type="range" name="age" min="0" max="125" step="25" /> 125
+        <hr />
+
+        <label for="password">Password: </label>
+        <input id="password" type="password" name="password" minlength="8" max="40" />
+        <hr />       
+
+        <label for="area">Area: </label>
+        <input id="area" type="text" name="area" list="area-list" />
+        <datalist id="area-list">
+            <option value="Beijing"></option>
+            <option value="Shanghai"></option>
+            <option value="Shenzhen"></option>
+            <option value="Guangzhou"></option>
+        </datalist>
+        <hr />
+
+        <label for="suggestion">Suggestion</label>
+        <textarea
+        name="suggestion"
+        id="suggestion"
+        cols="30"
+        rows="10"
+        placeholder="Please give us some suggestion, thanks"></textarea>
+        <hr />
+        <input type="checkbox" onclick="showPassword" id="showPassword" /> showPassword <hr />
+        <input id="save" type="checkbox" name="save" value="recommend" />
+        <label for="save">是否想要收到来自我们的推荐</label>
+        <!-- default checked -->
+        <hr />
+        <input id="save" type="checkbox" checked name="save" value="agree" />
+        <label for="save">Remember me</label>
+        <hr />
+
+        <button type="Submit">Submit</button>
+        <button type="Cancel">Cancel</button>
+        <hr />
+
+        <p>Some Useful links</p>
+        <ol>
+            <li><a href="https://www.htmlsymbols.xyz">https://www.htmlsymbols.xyz</a></li>
+            <li><a href="https://www.coloors86.netlify.app">https://www.htmlsymbols.xyz</a></li>
+        </ol>
+     
+    
+    <p>Jun Wen 2023 &#169;</p>
+    <!-- <input type="file"  /> -->
+    </form>
+    <!-- button 放在 form 里，则预设的 type 是 submit -->
+    <!-- button 放在 form 外，则预设的 type 是一个按钮 -->
+
+    <script>
+        let checkbox = document.querySelector("#showPassword");
+        let password = document.querySelector("#password");
+        checkbox.addEventListener("click",()=>{
+            if(password.type == "password"){
+                password.type = "text";
+            }else{
+                password.type = "password";
+            }
+        });
+    </script>
+    </body>
+</html>
